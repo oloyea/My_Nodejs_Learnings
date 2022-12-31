@@ -1,14 +1,14 @@
-// fs-module
-const { readFileSync, writeFileSync } = require("fs");
+// npm - global command, comes with node
+// npm --version
 
-// read files
-const firstFile = readFileSync("./content/first.txt", "utf-8");
-const secondFile = readFileSync("./content/second.txt", "utf-8");
-console.log(firstFile, secondFile);
+// local dependency - use it only in this particular project
+// npm i <package name>
 
-//write files (overides the whatever content in the file if file exists!). In order to append you will need to add a 3rd object parameter (flag: 'a)
-writeFileSync(
-  "./content/result-sync.txt",
-  `Here is the result : ${firstFile}, ${secondFile}`,
-  { flag: "a" } // flag is to append
-);
+// global usage - using it in any project
+// npm install -g <package name>
+// sudo npm install -g <package name> - For mac users.
+
+//package.json - manifest file (stores important info about project/packages)
+// manual approach (create a package.json file in trhe root of your project, create properties etc.)
+//npm init (step by step guide to creatig a package.json file)
+//npm init -y (default boilerplate)
