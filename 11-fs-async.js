@@ -1,5 +1,5 @@
 // fs-module
-const { readFile, writeFile, unwatchFile } = require("fs");
+const { readFile, writeFile } = require("fs");
 // read file.
 readFile("./content/first.txt", "utf-8", (err, result) => {
   if (err) {
